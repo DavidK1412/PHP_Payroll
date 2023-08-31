@@ -1,0 +1,8 @@
+{
+    "name": "vendor/name",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^6.8",
+        "paragonie/sodium_compat": "^1.20"
+    }
+}
