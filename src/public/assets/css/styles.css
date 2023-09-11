@@ -1,0 +1,14 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-form {
+    padding: 60px;
+    width: 35rem;
+    margin: 50px auto;
+    font-size: 15px;
+}
+

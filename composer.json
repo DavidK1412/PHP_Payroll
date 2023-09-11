@@ -3,6 +3,9 @@
     "type": "project",
     "require": {
         "firebase/php-jwt": "^6.8",
-        "paragonie/sodium_compat": "^1.20"
+        "paragonie/sodium_compat": "^1.20",
+        "dompdf/dompdf": "^2.0",
+        "twbs/bootstrap": "5.3.1",
+        "vlucas/phpdotenv": "^5.5"
     }
 }
