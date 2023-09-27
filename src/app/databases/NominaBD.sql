@@ -79,3 +79,18 @@ CREATE TABLE LoanPayments (
                               PRIMARY KEY(LoanPaymentUUID),
                               FOREIGN KEY(LoanUUID) REFERENCES Loan (LoanUUID)
 );
+
+INSERT INTO Position (PositionName) VALUES ('Admin');
+INSERT INTO Position (PositionName) VALUES ('Manager');
+
+INSERT INTO CostCenter (CostCenterName) VALUES ('IT');
+INSERT INTO CostCenter (CostCenterName) VALUES ('HR');
+
+
+INSERT INTO Employee (EmployeeID, EmployeeName, Email, PositionID, CostCenterID, Wage)
+VALUES ('1015993002', 'David Casallas', 'davidcasallas013@gmail.com', 1, 'b8a98fbf-4c07-11ee-bc0a-80304968d751', 1800000);
+
+INSERT INTO Employee (EmployeeID, EmployeeName, Email, PositionID, CostCenterID, Wage)
+VALUES ('10162578954', 'Juan Casallas', 'jrc@gmail.com', 2, ' b8af81f8-4c07-11ee-bc0a-80304968d751', 2600000);
+
+INSERT INTO Users (EmployeeUUID, Username, Password) VALUES ('570d1a63-4c08-11ee-bc0a-80304968d751', 'davidcasallas013', 'a795aebb6064630110ca17fa3c8804382d5e660884889c28ca220327f0108cfd');
