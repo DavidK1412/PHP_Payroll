@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p>© 2023 - Todos los derechos reservados</p>
+                <p>© 2024 - Todos los derechos reservados</p>
             </div>
         </div>
     </div>

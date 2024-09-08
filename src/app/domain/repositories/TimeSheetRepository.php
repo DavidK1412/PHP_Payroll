@@ -23,7 +23,7 @@ class TimeSheetRepository {
     }
 
     public function create(TimeSheet $timeSheet): void {
-        $sql = "INSERT INTO TimeSheet(EmployeeUUID, DaysWorked, VacationDays, SickDays) VALUES ('".$timeSheet->getEmployee()->getEmployeeUUID()."', ".$timeSheet->getDaysWorked().", ".$timeSheet->getVacationsDays().", ".$timeSheet->getSickDays().")";
+        $sql = "INSERT INTO TimeSheet(TimeSheetUUID, EmployeeUUID, DaysWorked, VacationDays, SickDays) VALUES ('".$timeSheet->getId()."', '".$timeSheet->getEmployee()->getEmployeeUUID()."', ".$timeSheet->getDaysWorked().", ".$timeSheet->getVacationsDays().", ".$timeSheet->getSickDays().")";
         $this->db->getConnection()->query($sql);
     }
 

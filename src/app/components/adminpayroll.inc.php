@@ -1,4 +1,6 @@
 <?php
+require_once('../../../vendor/autoload.php');
+use \Ramsey\Uuid\Uuid;
 require_once __DIR__.'/../domain/models/TimeSheet.php';
 require_once __DIR__.'/../domain/repositories/TimeSheetRepository.php';
 require_once __DIR__.'/../domain/models/PayStub.php';
@@ -12,8 +14,9 @@ $payStubs = $payStubRepository->getAll();
 if (isset($_POST['employee']) && isset($_POST['workedDays']) && isset($_POST['sickDays']) && isset($_POST['vacationDays'])) {
     $timeSheetRepository = new TimeSheetRepository();
     $employeeRepository = new EmployeeRepository();
+    // Generate uuid
     $timeSheet = new TimeSheet(
-        0,
+        Uuid::uuid4(),
         $employeeRepository->getById($_POST['employee']),
         new DateTime(),
         $_POST['workedDays'],
@@ -23,7 +26,7 @@ if (isset($_POST['employee']) && isset($_POST['workedDays']) && isset($_POST['si
     $timeSheetRepository->create($timeSheet);
     $payStub = new PayStub(
         '',
-        $timeSheetRepository->getLast(),
+        $timeSheet,
         $employeeRepository->getById($_POST['employee']),
         new DateTime(),
         0,

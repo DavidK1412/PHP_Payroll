@@ -1,14 +1,14 @@
 <?php
 
 class TimeSheet {
-    private int $id;
+    private string $id;
     private Employee $employee;
     private DateTime $date;
     private int $daysWorked;
     private int $vacationsDays;
     private int $sickDays;
 
-    public function __construct(int $id, Employee $employee, DateTime $date, int $daysWorked, int $vacationsDays, int $sickDays) {
+    public function __construct(string $id, Employee $employee, DateTime $date, int $daysWorked, int $vacationsDays, int $sickDays) {
         $this->id = $id;
         $this->employee = $employee;
         $this->date = $date;
@@ -17,7 +17,7 @@ class TimeSheet {
         $this->sickDays = $sickDays;
     }
 
-    public function getId(): int {
+    public function getId(): string {
         return $this->id;
     }
 
@@ -41,7 +41,7 @@ class TimeSheet {
         return $this->sickDays;
     }
 
-    public function setId(int $id): void {
+    public function setId(string $id): void {
         $this->id = $id;
     }
 
